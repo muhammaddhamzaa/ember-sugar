@@ -18,8 +18,12 @@ export default Controller.extend({
           "password": this.get('pass'),
           "platform": "base"
         },
-        success: function(data){
-          console.log(data);
+        success: function(response){
+          sessionStorage.setItem('token', response.access_token);
+          window.location.assign('/leads-page')
+        },
+        error: function(){
+          window.alert("Please enter correct credentials");
         },
         dataType: 'json'
       });
