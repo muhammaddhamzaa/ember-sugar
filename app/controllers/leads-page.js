@@ -6,14 +6,15 @@ export default Controller.extend({
   init:function(){
       const token = sessionStorage.getItem('token')
       this.get('ajax').request('http://127.0.0.1/SugarPro-Full-8.0.0/rest/v10/Leads',{
-        method: 'POST',
+        method: 'GET',
         headers:{
         'Content-Type': 'application/json',
-        'oauth-token': `${token}`
+        'oauth-token': token
         },
         success: function(response){
-          console.log(response);
+          response = response["records"];
           sessionStorage.setItem("data", response);
+          console.log(sessionStorage.getItem("data"));
         },
         error: function(){
           window.alert("Please Login!");
