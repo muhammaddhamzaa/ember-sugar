@@ -12,9 +12,8 @@ export default Controller.extend({
         'oauth-token': token
         },
         success: function(response){
-          response = response["records"];
+          response = JSON.stringify (response["records"]);
           sessionStorage.setItem("data", response);
-          console.log(sessionStorage.getItem("data"));
         },
         error: function(){
           window.alert("Please Login!");
