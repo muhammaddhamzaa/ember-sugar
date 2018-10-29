@@ -4,11 +4,9 @@ import Ember from 'ember';
 
 
 export default DS.RESTSerializer.extend(DS.EmbeddedRecordsMixin, {
-  attrs: {
-    records: { embedded: 'always' }
-  },
   normalizeResponse(store, primaryModelClass, payload, id, requestType){
-    payload = {records:payload}
+    payload = {
+      'leads': payload.records};
     console.log(payload);
     return this._super(store, primaryModelClass, payload, id, requestType);
   }
