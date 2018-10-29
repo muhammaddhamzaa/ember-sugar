@@ -20,7 +20,7 @@ export default Controller.extend({
         },
         success: function(response){
           sessionStorage.setItem('token', response.access_token);
-          window.location.assign('/leads-main')
+          window.location.assign('/leads')
         },
         error: function(){
           window.alert("Please enter correct credentials");
