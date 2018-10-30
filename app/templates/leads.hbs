@@ -1,6 +1,21 @@
 <h2>Just confirming</h2>
+<table>
 
-{{#each model as |mod|}}
-{{mod.name}}
-{{/each}}
+    {{#each model as |mod|}}
+    <tr>
+      <td>
+    {{mod.name}}
+  </td>
+    <td>
+    {{mod.status}}
+    </td>
+    <td>
+      {{mod.phone_work}}
+    </td>
+      </tr>
+
+    {{/each}}
+
+
+</table>
 {{outlet}}
