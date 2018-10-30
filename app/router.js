@@ -9,6 +9,8 @@ const Router = EmberRouter.extend({
 Router.map(function() {
   this.route('login-page');
   this.route('leads');
+  this.route('addLead');
+  this.route('insertlead');
 });
 
 export default Router;

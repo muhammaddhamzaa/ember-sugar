@@ -1,0 +1,38 @@
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+   <div class="navbar-header">
+     <a class="navbar-brand" href="#">Ember-Sugar</a>
+   </div>
+   <ul class="nav navbar-nav">
+     <li><a href="/leads">Leads</a></li>
+   </ul>
+ </div>
+</nav>
+<h2 align ="center">Insert new lead</h2>
+<div class = "container" align="center">
+  <form>
+  <br />
+  <h4> Enter First Name</h4>
+  {{input value=fname placeholder="Enter here" required=true}}
+  <br />
+  <br />
+  <h4> Enter Last Name </h4>
+  {{input value=lname placeholder="Enter here" required=true}}
+  <br />
+  <br />
+  <h4> Enter Phone Number</h4>
+  {{input value=phone placeholder="Enter phone number here" required=true}}
+  <br />
+  <br />
+  <h4> Enter Email </h4>
+  {{input value=email placeholder="Enter email here" required=true}}
+  <br />
+  <br />
+  <h4> Enter Account Name </h4>
+  {{input value=account placeholder="Enter account name here" required=true}}
+  <br />
+  <br />
+  <button class="btn btn-primary" {{action 'addData'}}>Submit</button>
+  </form>
+</div>
+{{outlet}}
