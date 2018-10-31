@@ -11,6 +11,7 @@ Router.map(function() {
   this.route('leads');
   this.route('addLead');
   this.route('insertlead');
+  this.route('deletelead');
 });
 
 export default Router;

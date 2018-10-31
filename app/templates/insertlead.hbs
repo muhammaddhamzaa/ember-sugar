@@ -5,31 +5,34 @@
    </div>
    <ul class="nav navbar-nav">
      <li><a href="/leads">Leads</a></li>
+     <li class="active"><a href="#">Add Lead</a></li>
+     <li><a href="/deletelead">Delete Lead</a></li>
    </ul>
  </div>
 </nav>
+
 <h2 align ="center">Insert new lead</h2>
 <div class = "container" align="center">
   <form>
   <br />
   <h4> Enter First Name</h4>
-  {{input value=fname placeholder="Enter here" required=true}}
+  {{input value=fname placeholder="eg. John" required=true}}
   <br />
   <br />
   <h4> Enter Last Name </h4>
-  {{input value=lname placeholder="Enter here" required=true}}
+  {{input value=lname placeholder="eg. Smith" required=true}}
   <br />
   <br />
   <h4> Enter Phone Number</h4>
-  {{input value=phone placeholder="Enter phone number here" required=true}}
+  {{input value=phone placeholder="eg. (123)4567890" required=true}}
   <br />
   <br />
   <h4> Enter Email </h4>
-  {{input value=email placeholder="Enter email here" required=true}}
+  {{input value=email placeholder="eg. abc@example.com" required=true}}
   <br />
   <br />
   <h4> Enter Account Name </h4>
-  {{input value=account placeholder="Enter account name here" required=true}}
+  {{input value=account placeholder="eg. Sample associates" required=true}}
   <br />
   <br />
   <button class="btn btn-primary" {{action 'addData'}}>Submit</button>

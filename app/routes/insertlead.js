@@ -16,9 +16,10 @@ export default Route.extend({
           phone_work: phone,
           account_name: account
       });
-      console.log(model.name);
+
       model.save();
       $(':input').val('');
+      window.alert("Saving, press 'ok' to confirm")
       this.transitionTo('leads');
       }
   }
