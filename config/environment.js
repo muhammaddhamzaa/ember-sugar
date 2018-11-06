@@ -5,6 +5,8 @@ module.exports = function(environment) {
     modulePrefix: 'ember-sugar',
     environment,
     rootURL: '/',
+    username: 'admin',
+    password: 'admin',
     locationType: 'auto',
     EmberENV: {
       FEATURES: {
@@ -20,6 +22,15 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
+    },
+
+    api: {
+      grant_type:'password',
+      clientId:'sugar',
+      clientSecret:'',
+
+      host: "http://127.0.0.1/SugarPro-Full-8.0.0/rest/v10",
+      platform: 'base'
     }
   };
 
@@ -46,6 +57,11 @@ module.exports = function(environment) {
   if (environment === 'production') {
     // here you can enable a production-specific feature
   }
+  ENV['ember-sugar'] = {
+    authenticationRoute: 'login-page',
+    routeAfterAuthentication: 'leads',
+    routeIfAlreadyAuthenticated: 'leads'
+  };
 
   return ENV;
 };

@@ -3,6 +3,7 @@ import Route from '@ember/routing/route';
 export default Route.extend({
   actions: {
     deleteData: function(){
+      var self = this;
       var id = this.get('controller').get('id');
       var deletion = this.store.findRecord('deletelead', id )
       .then(function(deletion)
@@ -11,15 +12,23 @@ export default Route.extend({
         .then(function()
         {
           window.alert("record deleted!");
-          this.transitionTo("leads");
+          self.transitionTo("leads");
         });
       })
-      .catch(function(err)
+      .catch((err)=>
       {
         window.alert("Error!");
         this.transitionTo("leads");
 
       });
+    },
+
+    leads: function(){
+      this.transitionTo("leads")
+    },
+
+    insertlead: function(){
+      this.transitionTo("insertlead")
     }
   }
 });

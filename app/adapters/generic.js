@@ -1,8 +1,9 @@
 import DS from 'ember-data';
+import ENV from '../config/environment'
 
 export default DS.RESTAdapter.extend({
-  host: "http://localhost/SugarPro-Full-8.0.0",
-  namespace: "rest/v10",
+
+  host: ENV.api.host,
   headers: Ember.computed(function() {
     return {
       'oauth-token': sessionStorage.getItem('token'),

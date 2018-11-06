@@ -21,6 +21,14 @@ export default Route.extend({
       $(':input').val('');
       window.alert("Saving, press 'ok' to confirm")
       this.transitionTo('leads');
+    },
+
+      leads: function(){
+        this.transitionTo("leads")
+      },
+
+      deletelead: function(){
+        this.transitionTo("deletelead")
       }
   }
 });
